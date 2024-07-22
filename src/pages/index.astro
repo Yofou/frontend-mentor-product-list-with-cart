@@ -1,5 +1,7 @@
 ---
 import '@fontsource-variable/red-hat-text';
+import Gallary from '../sections/Gallary.vue';
+import Cart from '../sections/Cart.vue';
 ---
 
 <html lang="en">
@@ -8,9 +10,10 @@ import '@fontsource-variable/red-hat-text';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Product List</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+  <body class="grid md:grid-cols-1 relative lg:grid-cols-[minmax(0,800px),336px] gap-400 py-1100 px-500 bg-rose-50 w-full justify-center min-h-screen">
+    <Gallary client:load />
+    <Cart client:load />
 	</body>
 </html>

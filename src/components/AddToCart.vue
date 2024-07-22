@@ -1,9 +1,9 @@
 <template>
-  <button v-if="itemAmount === 0" class="p-150 bg-white border border-rose-400 flex gap-100 items-center hover:border-red group">
+  <button v-if="itemAmount === 0" class="p-150 bg-white border border-rose-400 flex gap-100 items-center rounded-full justify-center w-[160px] hover:border-red group" @click="itemAmount = 1">
     <ShoppingCartPlus />
     <span class="text-preset-4 font-semibold text-rose-900 group-hover:text-red">Add to Cart</span>
   </button>
-  <div v-else class="p-150 bg-red rounded-full text-preset-3 flex justify-between hover:bg-[#952c0b]">
+  <div v-else class="p-150 bg-red rounded-full text-preset-3 w-[160px] flex justify-between hover:bg-[#952c0b]">
     <button @click="itemAmount -= 1">
       <AddCartMinus />
     </button>
